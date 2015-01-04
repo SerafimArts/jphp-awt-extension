@@ -1,4 +1,4 @@
-package ru.serafimarts.jphp.ext.awt;
+package ru.serafimarts.jphp.ext;
 
 import java.awt.*;
 import php.runtime.Memory;

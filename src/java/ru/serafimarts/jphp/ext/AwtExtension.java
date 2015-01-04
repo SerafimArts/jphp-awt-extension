@@ -1,10 +1,10 @@
-package ru.serafimarts.jphp.ext.awt;
+package ru.serafimarts.jphp.ext;
 
 import php.runtime.env.CompileScope;
 import php.runtime.ext.support.Extension;
 
 public class AwtExtension extends Extension {
-    public final static String NAMESPACE = "java\\awt\\";
+    public final static String NAMESPACE = "php\\awt\\";
 
     @Override
     public String getName() {

@@ -1,3 +1,7 @@
+sourceSets {
+    main.java.srcDirs = ['src']
+}
+
 def jphp (name) { return 'org.develnext:jphp-' + name + ':0.5-SNAPSHOT'; }
 
 dependencies {
