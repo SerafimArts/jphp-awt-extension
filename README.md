@@ -12,8 +12,8 @@ Exmaple:
 
 ```php
 <?php
-use java\awt\DisplayMode;
-use java\awt\GraphicsEnvironment;
+use php\awt\DisplayMode;
+use php\awt\GraphicsEnvironment;
 
 
 $device = GraphicsEnvironment::getDefaultScreenDevice();

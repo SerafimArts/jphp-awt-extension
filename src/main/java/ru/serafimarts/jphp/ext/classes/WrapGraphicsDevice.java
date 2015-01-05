@@ -1,20 +1,19 @@
-package ru.serafimarts.jphp.ext;
+package ru.serafimarts.jphp.ext.classes;
 
 import java.awt.*;
 
 import org.develnext.jphp.swing.SwingExtension;
 import org.develnext.jphp.swing.classes.components.UIForm;
-import org.develnext.jphp.swing.support.JFrameX;
 import php.runtime.Memory;
-import php.runtime.lang.spl.exception.InvalidArgumentException;
 import php.runtime.memory.*;
 import php.runtime.env.Environment;
 import php.runtime.reflection.ClassEntity;
 import static php.runtime.annotation.Reflection.*;
 import org.develnext.jphp.swing.classes.components.support.RootObject;
+import ru.serafimarts.jphp.ext.AudioExtension;
 
 
-@Name(AwtExtension.NAMESPACE + "GraphicsDevice")
+@Name(AudioExtension.NAMESPACE + "GraphicsDevice")
 public class WrapGraphicsDevice extends RootObject {
     public final static int TYPE_RASTER_SCREEN = GraphicsDevice.TYPE_RASTER_SCREEN;
     public final static int TYPE_PRINTER = GraphicsDevice.TYPE_PRINTER;
@@ -46,6 +45,8 @@ public class WrapGraphicsDevice extends RootObject {
     protected GraphicsDevice graphicsDevice;
 
 
+    @Signature
+    private Memory __construct(Environment env, Memory... args) { return Memory.NULL; }
 
 
     @Signature
@@ -75,7 +76,7 @@ public class WrapGraphicsDevice extends RootObject {
         return Memory.NULL;
     }
 
-    @Signature(@Arg(value = "form", typeClass = AwtExtension.NAMESPACE + "DisplayMode"))
+    @Signature(@Arg(value = "mode", typeClass = AudioExtension.NAMESPACE + "DisplayMode"))
     public Memory setDisplayMode(Environment env, Memory... args) {
         DisplayMode mode = args[0].toObject(WrapDisplayMode.class).getDisplayMode();
         this.graphicsDevice.setDisplayMode(mode);

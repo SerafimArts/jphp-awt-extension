@@ -1,18 +1,17 @@
-package ru.serafimarts.jphp.ext;
+package ru.serafimarts.jphp.ext.classes;
 
 import java.awt.*;
 
-import org.develnext.jphp.swing.SwingExtension;
 import php.runtime.Memory;
 import php.runtime.env.Environment;
-import php.runtime.memory.LongMemory;
 import php.runtime.memory.ObjectMemory;
 import php.runtime.reflection.ClassEntity;
 import static php.runtime.annotation.Reflection.*;
 import org.develnext.jphp.swing.classes.components.support.RootObject;
+import ru.serafimarts.jphp.ext.AudioExtension;
 
 
-@Name(AwtExtension.NAMESPACE + "GraphicsEnvironment")
+@Name(AudioExtension.NAMESPACE + "GraphicsEnvironment")
 public class WrapGraphicsEnvironment extends RootObject {
 
     public WrapGraphicsEnvironment(Environment env) {
