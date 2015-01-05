@@ -1,19 +1,18 @@
 package ru.serafimarts.jphp.ext.classes;
 
 import java.awt.*;
-
-import org.develnext.jphp.swing.SwingExtension;
-import org.develnext.jphp.swing.classes.components.UIForm;
 import php.runtime.Memory;
 import php.runtime.memory.*;
 import php.runtime.env.Environment;
 import php.runtime.reflection.ClassEntity;
+import ru.serafimarts.jphp.ext.AwtExtension;
+import org.develnext.jphp.swing.SwingExtension;
 import static php.runtime.annotation.Reflection.*;
+import org.develnext.jphp.swing.classes.components.UIForm;
 import org.develnext.jphp.swing.classes.components.support.RootObject;
-import ru.serafimarts.jphp.ext.AudioExtension;
 
 
-@Name(AudioExtension.NAMESPACE + "GraphicsDevice")
+@Name(AwtExtension.NAMESPACE  + "GraphicsDevice")
 public class WrapGraphicsDevice extends RootObject {
     public final static int TYPE_RASTER_SCREEN = GraphicsDevice.TYPE_RASTER_SCREEN;
     public final static int TYPE_PRINTER = GraphicsDevice.TYPE_PRINTER;
@@ -76,7 +75,7 @@ public class WrapGraphicsDevice extends RootObject {
         return Memory.NULL;
     }
 
-    @Signature(@Arg(value = "mode", typeClass = AudioExtension.NAMESPACE + "DisplayMode"))
+    @Signature(@Arg(value = "mode", typeClass = AwtExtension.NAMESPACE + "DisplayMode"))
     public Memory setDisplayMode(Environment env, Memory... args) {
         DisplayMode mode = args[0].toObject(WrapDisplayMode.class).getDisplayMode();
         this.graphicsDevice.setDisplayMode(mode);

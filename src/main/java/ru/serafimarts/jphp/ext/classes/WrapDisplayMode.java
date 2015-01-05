@@ -5,10 +5,9 @@ import php.runtime.Memory;
 import php.runtime.env.Environment;
 import php.runtime.memory.LongMemory;
 import php.runtime.reflection.ClassEntity;
+import ru.serafimarts.jphp.ext.AwtExtension;
 import static php.runtime.annotation.Reflection.*;
 import org.develnext.jphp.swing.classes.components.support.RootObject;
-import ru.serafimarts.jphp.ext.AudioExtension;
-import ru.serafimarts.jphp.ext.AwtExtension;
 
 
 @Name(AwtExtension.NAMESPACE + "DisplayMode")
@@ -75,7 +74,7 @@ public class WrapDisplayMode extends RootObject {
         return LongMemory.valueOf(displayMode.getRefreshRate());
     }
 
-    @Signature(@Arg(value = "displayMode", typeClass = AudioExtension.NAMESPACE + "DisplayMode"))
+    @Signature(@Arg(value = "displayMode", typeClass = AwtExtension.NAMESPACE + "DisplayMode"))
     public Memory equals(Environment env, Memory... args) {
         boolean result = displayMode.equals(args[0].toObject(WrapDisplayMode.class).getDisplayMode());
         return result ? Memory.TRUE : Memory.FALSE;

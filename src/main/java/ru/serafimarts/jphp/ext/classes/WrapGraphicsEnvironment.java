@@ -6,12 +6,12 @@ import php.runtime.Memory;
 import php.runtime.env.Environment;
 import php.runtime.memory.ObjectMemory;
 import php.runtime.reflection.ClassEntity;
+import ru.serafimarts.jphp.ext.AwtExtension;
 import static php.runtime.annotation.Reflection.*;
 import org.develnext.jphp.swing.classes.components.support.RootObject;
-import ru.serafimarts.jphp.ext.AudioExtension;
 
 
-@Name(AudioExtension.NAMESPACE + "GraphicsEnvironment")
+@Name(AwtExtension.NAMESPACE + "GraphicsEnvironment")
 public class WrapGraphicsEnvironment extends RootObject {
 
     public WrapGraphicsEnvironment(Environment env) {
