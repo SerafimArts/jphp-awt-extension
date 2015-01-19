@@ -4,9 +4,9 @@ jphp-awt-extension
 AWT Extension for Jphp Language
 
 Available classes:
-- DisplayMode
-- GraphicsDevice
-- GraphicsEnvironment
+- `php\awt\DisplayMode`
+- `php\awt\GraphicsDevice`
+- `php\awt\GraphicsEnvironment`
 
 Exmaple:
 
